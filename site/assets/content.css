@@ -9,6 +9,17 @@
   align-items: start;
 }
 
+.section-grid > *,
+.media-grid > *,
+.stack,
+.code-panel,
+.code-panel-header,
+.template-actions,
+.table-wrap,
+pre {
+  min-width: 0;
+}
+
 .single-column {
   width: min(920px, 100%);
   margin: 0 auto;
@@ -131,6 +142,7 @@ li {
 
 pre {
   margin: 0;
+  max-width: 100%;
   overflow-x: auto;
   padding: 18px;
   line-height: 1.52;
