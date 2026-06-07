@@ -129,6 +129,8 @@
 
       .nav-links {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
         gap: 20px;
         align-items: center;
         font-size: 0.92rem;
@@ -504,10 +506,12 @@
       <nav class="nav" aria-label="Primary navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
+          <a href="/getting-started/">Start</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/privacy/">Privacy</a>
           <a href="/evidence/">Evidence</a>
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
-          <a href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md#ten-minute-public-path">Setup</a>
-          <a href="/llms.txt">For agents</a>
+          <a href="/for-agents/">For agents</a>
         </div>
       </nav>
       <section class="hero-content" aria-labelledby="site-title">
@@ -519,8 +523,8 @@
         </p>
         <p class="quote-line">Source is the ground. Summaries are weather.</p>
         <div class="actions">
-          <a class="button primary" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md#ten-minute-public-path">Get to first recall</a>
-          <a class="button" href="/evidence/">See magic moments</a>
+          <a class="button primary" href="/getting-started/">Get to first recall</a>
+          <a class="button" href="/source-backed-continuity/">Understand the model</a>
         </div>
       </section>
     </header>
@@ -585,13 +589,25 @@
           </div>
           <div class="links">
             <div class="link-list">
-              <a href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md#ten-minute-public-path">
-                10-minute path
-                <span>The smallest dependable path from package check to source-backed search.</span>
+              <a href="/getting-started/">
+                Getting started
+                <span>The shortest public path from CLI probe to source-backed search.</span>
               </a>
-              <a href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/install-guide.md#first-recall-path">
-                First recall path
-                <span>Install, consented onboarding, search, and optional hook setup.</span>
+              <a href="/architecture/">
+                Architecture
+                <span>The layer map behind clean source, registry, hooks, and public surfaces.</span>
+              </a>
+              <a href="/source-backed-continuity/">
+                Source-backed continuity
+                <span>How agents separate direction, routes, bounded evidence, and open source.</span>
+              </a>
+              <a href="/privacy/">
+                Privacy boundary
+                <span>What stays local, what can be public, and why sync must stay explicit.</span>
+              </a>
+              <a href="/for-agents/">
+                For agents
+                <span>Read-first recall guidance for agent hosts and MCP integrations.</span>
               </a>
               <a href="/evidence/">
                 Magic moments

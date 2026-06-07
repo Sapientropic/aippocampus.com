@@ -8,6 +8,12 @@ has innate memory.
 
 Canonical repository: https://github.com/Sapientropic/AIppocampus
 Wiki: https://github.com/Sapientropic/AIppocampus/wiki
+Getting started: https://www.aippocampus.com/getting-started/
+Architecture: https://www.aippocampus.com/architecture/
+Source-backed continuity: https://www.aippocampus.com/source-backed-continuity/
+Privacy boundary: https://www.aippocampus.com/privacy/
+For agents: https://www.aippocampus.com/for-agents/
+Evidence surface: https://www.aippocampus.com/evidence/
 Install guide: https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/install-guide.md
 Public API: https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md
 Claim boundary: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/readiness/stage-0-5-readiness.md

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Architecture - AIppocampus</title>
+    <meta name="description" content="A public architecture map for AIppocampus: source, clean source, registry, hooks, semantic routes, and access surfaces." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="AIppocampus Architecture" />
+    <meta property="og:description" content="How AIppocampus keeps source reachable without turning summaries into truth." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.aippocampus.com/architecture/" />
+    <meta property="og:image" content="https://www.aippocampus.com/assets/aippocampus-readme-hero.jpg" />
+    <link rel="canonical" href="https://www.aippocampus.com/architecture/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/content.css" />
+    <meta name="theme-color" content="#070f1f" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="mark" href="/">AIppocampus</a>
+        <div class="nav-links">
+          <a href="/getting-started/">Start</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/source-backed-continuity/">Continuity</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/for-agents/">For agents</a>
+          <a href="/evidence/">Evidence</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <p class="kicker">System map</p>
+        <h1>Architecture</h1>
+        <p class="lede">AIppocampus is a source-backed continuity layer. The architecture is built around one rule: source is the ground, summaries are navigation.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="band warm">
+        <div class="section-grid">
+          <h2>What it is</h2>
+          <div class="stack">
+            <p class="section-copy">AIppocampus keeps conversation source reachable across threads, projects, devices, and long-running context. It helps a later agent find prior evidence and continue carefully, without claiming the foreground model has innate memory.</p>
+            <p class="section-copy">It can support project work, but it is broader than a task memory system: old corrections, unfinished work, style preferences, recurring questions, reading notes, and relationship context can all matter when a new thread begins.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <h2>The six layers</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Layer</th><th>Job</th><th>Boundary</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Conversation source</td><td>Preserve provider-owned transcripts.</td><td>Audit path, not the daily recall surface.</td></tr>
+                <tr><td>Clean source</td><td>Keep visible user turns and final answers.</td><td>Original wording, not summary memory.</td></tr>
+                <tr><td>Registry and indexes</td><td>Find threads, snippets, and source refs.</td><td>Search is navigation until source backs it.</td></tr>
+                <tr><td>Ambient hooks</td><td>Notice when old context may matter.</td><td>Quiet, opt-in, and safe to fail.</td></tr>
+                <tr><td>Semantic routes</td><td>Organize attention and propose routes.</td><td>Helpful direction, not fact.</td></tr>
+                <tr><td>Access surfaces</td><td>Expose CLI, MCP, sync, and package entrypoints.</td><td>Public contracts stay additive.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="band blue">
+        <div class="section-grid">
+          <h2>What it is not</h2>
+          <ul class="plain-list">
+            <li>Not proof that a model remembers you internally.</li>
+            <li>Not a generic hosted RAG service.</li>
+            <li>Not a simple vector database with friendlier wording.</li>
+            <li>Not a cloud profile service.</li>
+            <li>Not a replacement for reopening source when claims matter.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band deep">
+        <div class="section-grid">
+          <h2>Source trail</h2>
+          <div class="stack">
+            <p class="section-copy">Use the repository docs for implementation detail and contracts.</p>
+            <div class="button-row">
+              <a class="button" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/architecture/architecture-overview.md">Architecture overview</a>
+              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/roadmap.md">Roadmap</a>
+            </div>
+            <p class="source-note">Adapted from the public wiki page Architecture and Concepts.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Source-backed continuity without false claims of innate model memory.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="/llms.txt">llms.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

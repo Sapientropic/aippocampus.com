@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Getting Started - AIppocampus</title>
+    <meta name="description" content="Start AIppocampus with a read-only CLI probe, explicit local onboarding, and one source-backed recall search." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Getting Started with AIppocampus" />
+    <meta property="og:description" content="The shortest public path from CLI probe to first source-backed recall." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.aippocampus.com/getting-started/" />
+    <meta property="og:image" content="https://www.aippocampus.com/assets/aippocampus-readme-hero.jpg" />
+    <link rel="canonical" href="https://www.aippocampus.com/getting-started/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/content.css" />
+    <meta name="theme-color" content="#070f1f" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="mark" href="/">AIppocampus</a>
+        <div class="nav-links">
+          <a href="/getting-started/">Start</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/source-backed-continuity/">Continuity</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/for-agents/">For agents</a>
+          <a href="/evidence/">Evidence</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <p class="kicker">First useful path</p>
+        <h1>Getting started</h1>
+        <p class="lede">Try AIppocampus locally before you configure anything ambitious: probe the CLI, check provider status, onboard only with consent, then search one old phrase from source.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="band warm">
+        <div class="section-grid">
+          <h2>The short version</h2>
+          <div class="stack">
+            <ol class="number-list">
+              <li>Use Python 3.12 or newer.</li>
+              <li>Probe the packaged CLI without writing memory artifacts.</li>
+              <li>Check local conversation providers in read-only mode.</li>
+              <li>Register local history only after explicit consent.</li>
+              <li>Search for one distinctive old phrase and reopen source when claims matter.</li>
+            </ol>
+            <div class="button-row">
+              <a class="button" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/install-guide.md">Install guide</a>
+              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus#first-checks">README first checks</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <h2>Commands</h2>
+          <div class="stack">
+            <p class="section-copy">Start with read-only checks:</p>
+            <pre><code>uvx aippocampus --help
+uvx aippocampus onboard --provider codex --status --format json</code></pre>
+            <p class="section-copy">After you decide this machine may create local memory artifacts:</p>
+            <pre><code>uvx aippocampus onboard --provider codex --all --format json
+uvx aippocampus search "a distinctive old phrase"</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="band blue">
+        <div class="section-grid">
+          <h2>What to expect</h2>
+          <div class="item-grid">
+            <article class="item">
+              <h3>It feels like preparing a library</h3>
+              <p>AIppocampus scans local source, builds clean source, and prepares searchable indexes. It is not a hosted chat memory switch.</p>
+            </article>
+            <article class="item">
+              <h3>The first payoff is small</h3>
+              <p>A useful recall result points back to earlier source. The agent can continue from evidence instead of acting as if it magically remembers.</p>
+            </article>
+            <article class="item">
+              <h3>Hooks come later</h3>
+              <p>Manual search proves the substrate. Prompt and lifecycle hooks make future continuity quieter after you trust the local setup.</p>
+            </article>
+            <article class="item">
+              <h3>Privacy stays first</h3>
+              <p>Pause before onboarding if the workspace contains material you do not want in local memory artifacts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band deep">
+        <div class="section-grid">
+          <h2>Next stops</h2>
+          <div class="stack">
+            <p class="section-copy">Read the architecture page for the mental model, then the agent page if you are wiring AIppocampus into an agent host.</p>
+            <div class="button-row">
+              <a class="button" href="/architecture/">Architecture</a>
+              <a class="button secondary" href="/for-agents/">For agents</a>
+            </div>
+            <p class="source-note">Adapted from the public wiki pages Getting Started and First Recall and Onboarding.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Source-backed continuity without false claims of innate model memory.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="/llms.txt">llms.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

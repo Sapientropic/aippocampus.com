@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy - AIppocampus</title>
+    <meta name="description" content="AIppocampus privacy boundaries: local-first memory, private source artifacts, opt-in sync, and public-safe project docs." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="AIppocampus Privacy Boundary" />
+    <meta property="og:description" content="What stays local, what the public repository contains, and where sync must stay explicit." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.aippocampus.com/privacy/" />
+    <meta property="og:image" content="https://www.aippocampus.com/assets/aippocampus-readme-hero.jpg" />
+    <link rel="canonical" href="https://www.aippocampus.com/privacy/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/content.css" />
+    <meta name="theme-color" content="#070f1f" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="mark" href="/">AIppocampus</a>
+        <div class="nav-links">
+          <a href="/getting-started/">Start</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/source-backed-continuity/">Continuity</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/for-agents/">For agents</a>
+          <a href="/evidence/">Evidence</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <p class="kicker">Local-first boundary</p>
+        <h1>Privacy</h1>
+        <p class="lede">AIppocampus is local first because memory is intimate. Public code and public docs are different from the private source trail that makes continuity possible.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="band warm">
+        <div class="section-grid">
+          <h2>The simple rule</h2>
+          <div class="stack">
+            <p class="section-copy">If it came from actual private conversations, do not put it in a public repository or website by accident.</p>
+            <ul class="plain-list">
+              <li>Raw Codex rollouts and provider transcripts.</li>
+              <li>Clean-source exports and generated indexes.</li>
+              <li>Registry data, sync bundles, and private vault exports.</li>
+              <li>API keys, cookies, tokens, credentials, and local machine paths.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <h2>Public vs private</h2>
+          <div class="item-grid">
+            <article class="item"><h3>Public project surface</h3><p>The installable skill package, public docs, scripts, tests, benchmarks, examples, and API contracts can live in the open repository.</p></article>
+            <article class="item"><h3>Private memory surface</h3><p>Conversation source and local memory artifacts belong to the person who created them unless they deliberately publish a safe example.</p></article>
+            <article class="item"><h3>Sync is explicit</h3><p>Sync can be useful, but raw rollout sync should stay opt-in and encrypted when it leaves a trusted device.</p></article>
+            <article class="item"><h3>External models are optional</h3><p>External-model routes should pass through redaction and never turn model-generated associations into source-backed facts.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band blue">
+        <div class="section-grid">
+          <h2>Good public examples</h2>
+          <div class="stack">
+            <p class="section-copy">Public evidence should be claim-bounded: demo runs, benchmark outputs, community reports, and redacted examples that make their scope clear. Private source should stay private even when it is emotionally or technically compelling.</p>
+            <div class="button-row">
+              <a class="button" href="/evidence/">Evidence surface</a>
+              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/privacy-security-checklist.md">Privacy checklist</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band deep">
+        <div class="section-grid">
+          <h2>Source trail</h2>
+          <div class="stack">
+            <p class="section-copy">The repository keeps the operational boundary in the public core and privacy docs.</p>
+            <div class="button-row">
+              <a class="button" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-core-boundary.md">Public core boundary</a>
+              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/architecture/encrypted-sync-v1.md">Encrypted sync</a>
+            </div>
+            <p class="source-note">Adapted from the public wiki pages Privacy and Data Boundary and Privacy, Sync, and Redaction.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Source-backed continuity without false claims of innate model memory.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="/llms.txt">llms.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

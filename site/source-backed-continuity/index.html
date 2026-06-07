@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Source-Backed Continuity - AIppocampus</title>
+    <meta name="description" content="How AIppocampus separates source-backed evidence from summaries, scents, and unsupported memory-like claims." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Source-Backed Continuity" />
+    <meta property="og:description" content="The trust grammar behind AIppocampus: direction, reopenable routes, bounded evidence, and source-open context." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.aippocampus.com/source-backed-continuity/" />
+    <meta property="og:image" content="https://www.aippocampus.com/assets/aippocampus-readme-hero.jpg" />
+    <link rel="canonical" href="https://www.aippocampus.com/source-backed-continuity/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/content.css" />
+    <meta name="theme-color" content="#070f1f" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="mark" href="/">AIppocampus</a>
+        <div class="nav-links">
+          <a href="/getting-started/">Start</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/source-backed-continuity/">Continuity</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/for-agents/">For agents</a>
+          <a href="/evidence/">Evidence</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <p class="kicker">Trust grammar</p>
+        <h1>Source-backed continuity</h1>
+        <p class="lede">AIppocampus lets memory feel continuous without treating every summary, search score, or ambient hint as truth.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="band warm">
+        <div class="section-grid">
+          <h2>The promise</h2>
+          <div class="stack">
+            <p class="section-copy">A later agent should be able to find where the work and relationship were, then continue with care. That does not require pretending the base model has changed weights or secretly remembers the user.</p>
+            <p class="section-copy">AIppocampus keeps the source trail reachable, then gives agents language for what each recall result can safely support.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <h2>Action grammar</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Signal</th><th>How an agent should use it</th></tr></thead>
+              <tbody>
+                <tr><td><code>direction_only</code></td><td>Use as scent or background direction. Do not make factual claims from it.</td></tr>
+                <tr><td><code>direction_with_ref</code></td><td>Use as a candidate route. Reopen source before claiming.</td></tr>
+                <tr><td><code>reopenable_route</code></td><td>Follow the route or handle before broad manual search.</td></tr>
+                <tr><td><code>bounded_evidence</code></td><td>Use within declared scope. Deepen for exact wording, sensitive facts, or wider claims.</td></tr>
+                <tr><td><code>source_open</code></td><td>Reason from the open source while respecting scope and privacy limits.</td></tr>
+                <tr><td><code>ignore_or_blocked</code></td><td>Do not let it shape the answer except to explain the boundary.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="band blue">
+        <div class="section-grid">
+          <h2>Retrieval path</h2>
+          <div class="stack">
+            <pre><code>provider transcript
+  -> clean source
+  -> registry and local indexes
+  -> search, MCP, hooks, sync
+  -> source reopen when claims matter</code></pre>
+            <p class="section-copy">High scores mean "look here first." They do not mean "this is true." For strong answers, exact quotes, stale claims, or private context, source reopening owns the claim boundary.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band deep">
+        <div class="section-grid">
+          <h2>Read next</h2>
+          <div class="stack">
+            <p class="section-copy">The architecture page shows where this grammar fits in the system. The evidence page shows how claims are separated from not-yet-proven material.</p>
+            <div class="button-row">
+              <a class="button" href="/architecture/">Architecture</a>
+              <a class="button secondary" href="/evidence/">Evidence</a>
+            </div>
+            <p class="source-note">Adapted from the public wiki pages Architecture and Concepts and Source and Retrieval Pipeline.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Source-backed continuity without false claims of innate model memory.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="/llms.txt">llms.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>For Agents - AIppocampus</title>
+    <meta name="description" content="How agent hosts should use AIppocampus: read-first recall, MCP tools, CLI checks, and source-backed boundaries." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="AIppocampus for Agents" />
+    <meta property="og:description" content="A public guide for agents and agent hosts that need source-backed continuity." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.aippocampus.com/for-agents/" />
+    <meta property="og:image" content="https://www.aippocampus.com/assets/aippocampus-readme-hero.jpg" />
+    <link rel="canonical" href="https://www.aippocampus.com/for-agents/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/content.css" />
+    <meta name="theme-color" content="#070f1f" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="mark" href="/">AIppocampus</a>
+        <div class="nav-links">
+          <a href="/getting-started/">Start</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/source-backed-continuity/">Continuity</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/for-agents/">For agents</a>
+          <a href="/evidence/">Evidence</a>
+        </div>
+      </nav>
+      <div class="hero-copy">
+        <p class="kicker">Agent-facing guide</p>
+        <h1>For agents</h1>
+        <p class="lede">Use AIppocampus to find the source trail first, then decide what kind of answer the evidence actually supports.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="band warm">
+        <div class="section-grid">
+          <h2>Default stance</h2>
+          <div class="stack">
+            <p class="section-copy">If old context may change the answer, use the smallest useful route before broad search. Treat summaries, semantic labels, and ambient scents as navigation unless source is open or bounded evidence is declared.</p>
+            <ol class="number-list">
+              <li>Notice when continuity might matter.</li>
+              <li>Open the smallest useful route or recall handle.</li>
+              <li>Reopen source before exact, sensitive, stale, or disputed claims.</li>
+              <li>Say when a route is blocked, stale, private, or insufficient.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <h2>Public surfaces</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Need</th><th>Use</th></tr></thead>
+              <tbody>
+                <tr><td>Human or script checks</td><td><code>aippocampus</code> CLI</td></tr>
+                <tr><td>Agent host read tools</td><td>MCP</td></tr>
+                <tr><td>Provider-neutral import</td><td>Generic JSONL import</td></tr>
+                <tr><td>CI or local automation</td><td>CLI <code>--json</code> and documented return codes</td></tr>
+                <tr><td>Trusted in-process command dispatch</td><td><code>run_command(capture_output=True)</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="band blue">
+        <div class="section-grid">
+          <h2>Ten-minute path</h2>
+          <div class="stack">
+            <pre><code>uvx aippocampus --help
+uvx aippocampus onboard --provider codex --status --format json</code></pre>
+            <p class="section-copy">After explicit consent to register local history:</p>
+            <pre><code>uvx aippocampus onboard --provider codex --all --format json
+uvx aippocampus search "a distinctive old phrase"
+aippocampus mcp list-tools</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="band deep">
+        <div class="section-grid">
+          <h2>Agent-readable files</h2>
+          <div class="stack">
+            <p class="section-copy">Start with <a href="/llms.txt">llms.txt</a> for a compact agent overview, then use the public API docs when wiring tools.</p>
+            <div class="button-row">
+              <a class="button" href="/llms.txt">llms.txt</a>
+              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md">Public API</a>
+            </div>
+            <p class="source-note">Adapted from the public wiki page MCP and Public API plus the AIppocampus runtime entrypoint.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Source-backed continuity without false claims of innate model memory.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="/llms.txt">llms.txt</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

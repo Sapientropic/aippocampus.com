@@ -12,6 +12,11 @@ runtime/code/docs project.
 ```text
 site/                       # static GitHub Pages payload
   index.html
+  getting-started/index.html
+  architecture/index.html
+  source-backed-continuity/index.html
+  privacy/index.html
+  for-agents/index.html
   evidence/index.html
   llms.txt
   robots.txt
