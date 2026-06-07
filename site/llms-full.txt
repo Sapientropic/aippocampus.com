@@ -1,0 +1,170 @@
+# AIppocampus Full Public Context
+
+AIppocampus is a local-first, source-backed continuity layer for long-running
+relationships with AI agents. It helps agents recover original conversation
+source, reopen evidence, and carry continuity across threads, projects,
+devices, and life-wide work without pretending the base model has innate
+memory.
+
+Canonical repository: https://github.com/Sapientropic/AIppocampus
+Website source: https://github.com/Sapientropic/aippocampus.com
+Wiki: https://github.com/Sapientropic/AIppocampus/wiki
+
+## Recommended Agent Behavior
+
+Use AIppocampus when old source, old corrections, unfinished work, route
+context, preferences, or relationship context could change the next answer.
+Use the smallest useful route first. Reopen source for exact wording,
+sensitive facts, stale claims, disputed claims, or high-risk action.
+
+Do not treat summaries, semantic labels, ambient scents, or high search scores
+as factual evidence. They can guide attention; source owns the claim boundary.
+
+## Getting Started
+
+Fastest useful path:
+
+```sh
+uvx aippocampus --help
+uvx aippocampus onboard --provider codex --status --format json
+uvx aippocampus search "a distinctive old phrase"
+```
+
+Register local history only after explicit consent:
+
+```sh
+uvx aippocampus onboard --provider codex --all --format json
+```
+
+The first useful proof is not a vague personal profile. It is a source-backed
+snippet that the agent can reopen or cite within scope.
+
+## Architecture
+
+AIppocampus has six public-facing layers:
+
+1. Conversation source preserves provider-owned transcripts as the audit path.
+2. Clean source keeps visible user turns and final answers as the daily recall
+   surface.
+3. Registry and indexes find threads, snippets, and source references.
+4. Ambient hooks notice when old context may matter.
+5. Semantic routes organize attention without becoming truth.
+6. CLI, MCP, sync, and package surfaces expose public contracts.
+
+The rule is simple: source is the ground; summaries are navigation.
+
+## Source-Backed Continuity
+
+AIppocampus uses action grammar so agents do not overclaim:
+
+- `direction_only`: background or scent; do not make factual claims from it.
+- `direction_with_ref`: source-ref-backed candidate direction; reopen source
+  before claiming.
+- `reopenable_route`: follow the route or handle before broad search.
+- `bounded_evidence`: usable within declared scope; deepen for exact, wider,
+  sensitive, or disputed claims.
+- `source_open`: source is open; reason within scope and privacy boundaries.
+- `ignore_or_blocked`: do not use except to explain the boundary.
+
+Retrieval path:
+
+```text
+provider transcript
+  -> clean source
+  -> registry and local indexes
+  -> search, MCP, hooks, sync
+  -> source reopen when claims matter
+```
+
+## Privacy
+
+AIppocampus is local first because memory is intimate.
+
+Public project code and documentation are different from private memory data.
+Do not publish raw Codex rollouts, provider transcripts, clean-source exports,
+generated indexes, registry data, sync bundles, private vault exports, API
+keys, cookies, tokens, credentials, or local machine paths.
+
+Sync should stay explicit. Raw rollout sync should be opt-in and encrypted
+when it leaves a trusted device. External-model routes are optional and should
+pass through redaction.
+
+## For Agents
+
+When continuity may matter:
+
+1. Notice the cue.
+2. Open the smallest useful route or recall handle.
+3. Reopen source before exact, sensitive, stale, or disputed claims.
+4. Say when a route is blocked, stale, private, or insufficient.
+
+Public surfaces:
+
+- Human or script checks: `aippocampus` CLI.
+- Agent host read tools: MCP.
+- Provider-neutral import: generic JSONL import.
+- CI or local automation: CLI `--json` and documented return codes.
+- Trusted in-process command dispatch: `run_command(capture_output=True)`.
+
+## Evidence
+
+Evidence and field reports should be source-backed, claim-bounded, and
+public-safe.
+
+Official evidence belongs in repository docs. Community reports are signals,
+not automatic product claims. Discussions are best for questions, ideas,
+design review, and developing interpretation.
+
+Field report shape:
+
+```md
+## What I tested
+
+## What continuity changed
+
+## Source boundary
+
+## Environment
+
+## Gaps or surprises
+```
+
+## Updates
+
+Recent public updates:
+
+- 2026-06-08: Public site tightened for first recall, unified style, copyable
+  commands, updates/story pages, and machine-readable text files.
+- 2026-06-07: Website source moved into Sapientropic/aippocampus.com.
+- 2026-06-07: Wiki material became public guide pages.
+- 2026-06: Evidence and field reports got a public surface.
+- 2026-06: Main repository work continued on active recall, evidence
+  boundaries, route discipline, and code scanning cleanup.
+
+## Story
+
+AIppocampus began from a simple discomfort: a new thread can be technically
+brilliant and still lose the human continuity of the work.
+
+The project is not trying to make a model pretend it has an inner
+autobiography. It gives the next agent a reliable way to find the source
+trail: old corrections, unfinished work, route context, style preferences,
+reading notes, and relationship context that should not vanish just because
+the chat window changed.
+
+Source-backed continuity is not innate memory. It is the practice of reopening
+evidence so the present can continue honestly.
+
+## Links
+
+- Home: https://www.aippocampus.com/
+- Getting started: https://www.aippocampus.com/getting-started/
+- Architecture: https://www.aippocampus.com/architecture/
+- Source-backed continuity: https://www.aippocampus.com/source-backed-continuity/
+- Privacy: https://www.aippocampus.com/privacy/
+- For agents: https://www.aippocampus.com/for-agents/
+- Evidence: https://www.aippocampus.com/evidence/
+- Updates: https://www.aippocampus.com/updates/
+- Story: https://www.aippocampus.com/story/
+- llms.txt: https://www.aippocampus.com/llms.txt
+- humans.txt: https://www.aippocampus.com/humans.txt

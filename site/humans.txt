@@ -1,0 +1,20 @@
+/* TEAM */
+
+Project: AIppocampus
+Steward: Sapientropic
+Repository: https://github.com/Sapientropic/AIppocampus
+Website source: https://github.com/Sapientropic/aippocampus.com
+
+/* SITE */
+
+URL: https://www.aippocampus.com/
+Purpose: Public website for AIppocampus, a local-first, source-backed continuity layer for AI agents.
+Built with: Static HTML, CSS, and a small copy-button script.
+Hosted on: GitHub Pages.
+Last updated: 2026-06-08.
+
+/* BOUNDARY */
+
+This website is public-safe project material. Private memory artifacts,
+conversation source, raw rollouts, registry data, sync bundles, local paths,
+tokens, cookies, and credentials do not belong here.

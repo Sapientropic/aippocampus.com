@@ -22,6 +22,21 @@
     <loc>https://www.aippocampus.com/evidence/</loc>
   </url>
   <url>
+    <loc>https://www.aippocampus.com/updates/</loc>
+  </url>
+  <url>
+    <loc>https://www.aippocampus.com/story/</loc>
+  </url>
+  <url>
     <loc>https://www.aippocampus.com/llms.txt</loc>
+  </url>
+  <url>
+    <loc>https://www.aippocampus.com/llms-full.txt</loc>
+  </url>
+  <url>
+    <loc>https://www.aippocampus.com/humans.txt</loc>
+  </url>
+  <url>
+    <loc>https://www.aippocampus.com/downloads/field-report-template.md</loc>
   </url>
 </urlset>

@@ -18,6 +18,7 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/assets/content.css" />
+    <script defer src="/assets/site.js"></script>
     <meta name="theme-color" content="#070f1f" />
   </head>
   <body>
@@ -25,12 +26,14 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
+          <a href="/">Home</a>
           <a href="/getting-started/">Start</a>
           <a href="/architecture/">Architecture</a>
           <a href="/source-backed-continuity/">Continuity</a>
           <a href="/privacy/">Privacy</a>
-          <a href="/for-agents/">For agents</a>
+          <a href="/for-agents/">Agents</a>
           <a href="/evidence/">Evidence</a>
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
         </div>
       </nav>
       <div class="hero-copy">
@@ -54,25 +57,30 @@
       <section class="band">
         <div class="section-grid">
           <h2>The six layers</h2>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Layer</th><th>Job</th><th>Boundary</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Conversation source</td><td>Preserve provider-owned transcripts.</td><td>Audit path, not the daily recall surface.</td></tr>
-                <tr><td>Clean source</td><td>Keep visible user turns and final answers.</td><td>Original wording, not summary memory.</td></tr>
-                <tr><td>Registry and indexes</td><td>Find threads, snippets, and source refs.</td><td>Search is navigation until source backs it.</td></tr>
-                <tr><td>Ambient hooks</td><td>Notice when old context may matter.</td><td>Quiet, opt-in, and safe to fail.</td></tr>
-                <tr><td>Semantic routes</td><td>Organize attention and propose routes.</td><td>Helpful direction, not fact.</td></tr>
-                <tr><td>Access surfaces</td><td>Expose CLI, MCP, sync, and package entrypoints.</td><td>Public contracts stay additive.</td></tr>
-              </tbody>
-            </table>
+          <div class="stack">
+            <figure class="diagram-frame">
+              <img src="/assets/architecture-layers.svg" alt="Layered architecture diagram showing source, clean source, registry, hooks, routes, and public access surfaces." />
+            </figure>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Layer</th><th>Job</th><th>Boundary</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Conversation source</td><td>Preserve provider-owned transcripts.</td><td>Audit path, not the daily recall surface.</td></tr>
+                  <tr><td>Clean source</td><td>Keep visible user turns and final answers.</td><td>Original wording, not summary memory.</td></tr>
+                  <tr><td>Registry and indexes</td><td>Find threads, snippets, and source refs.</td><td>Search is navigation until source backs it.</td></tr>
+                  <tr><td>Ambient hooks</td><td>Notice when old context may matter.</td><td>Quiet, opt-in, and safe to fail.</td></tr>
+                  <tr><td>Semantic routes</td><td>Organize attention and propose routes.</td><td>Helpful direction, not fact.</td></tr>
+                  <tr><td>Access surfaces</td><td>Expose CLI, MCP, sync, and package entrypoints.</td><td>Public contracts stay additive.</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="band blue">
+      <section class="band mist">
         <div class="section-grid">
           <h2>What it is not</h2>
           <ul class="plain-list">
@@ -106,6 +114,9 @@
         <div class="footer-links">
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
           <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/discussions">Discussions</a>
+          <a href="/updates/">Updates</a>
+          <a href="/story/">Story</a>
           <a href="/llms.txt">llms.txt</a>
         </div>
       </div>

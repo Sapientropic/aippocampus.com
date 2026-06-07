@@ -18,10 +18,15 @@ site/                       # static GitHub Pages payload
   privacy/index.html
   for-agents/index.html
   evidence/index.html
+  updates/index.html
+  story/index.html
   llms.txt
+  llms-full.txt
+  humans.txt
   robots.txt
   sitemap.xml
   assets/
+  downloads/
 .github/workflows/pages.yml # deploys site/ to GitHub Pages
 ```
 

@@ -18,6 +18,7 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/assets/content.css" />
+    <script defer src="/assets/site.js"></script>
     <meta name="theme-color" content="#070f1f" />
   </head>
   <body>
@@ -25,12 +26,14 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
+          <a href="/">Home</a>
           <a href="/getting-started/">Start</a>
           <a href="/architecture/">Architecture</a>
           <a href="/source-backed-continuity/">Continuity</a>
           <a href="/privacy/">Privacy</a>
-          <a href="/for-agents/">For agents</a>
+          <a href="/for-agents/">Agents</a>
           <a href="/evidence/">Evidence</a>
+          <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
         </div>
       </nav>
       <div class="hero-copy">
@@ -74,16 +77,28 @@
         </div>
       </section>
 
-      <section class="band blue">
+      <section class="band mist">
         <div class="section-grid">
           <h2>Ten-minute path</h2>
           <div class="stack">
-            <pre><code>uvx aippocampus --help
+            <div class="code-panel">
+              <div class="code-panel-header">
+                <span>Read-only agent check</span>
+                <button class="copy-button" type="button" data-copy-target="#agent-status">Copy</button>
+              </div>
+              <pre><code id="agent-status">uvx aippocampus --help
 uvx aippocampus onboard --provider codex --status --format json</code></pre>
+            </div>
             <p class="section-copy">After explicit consent to register local history:</p>
-            <pre><code>uvx aippocampus onboard --provider codex --all --format json
+            <div class="code-panel">
+              <div class="code-panel-header">
+                <span>Consented agent path</span>
+                <button class="copy-button" type="button" data-copy-target="#agent-onboard">Copy</button>
+              </div>
+              <pre><code id="agent-onboard">uvx aippocampus onboard --provider codex --all --format json
 uvx aippocampus search "a distinctive old phrase"
 aippocampus mcp list-tools</code></pre>
+            </div>
           </div>
         </div>
       </section>
@@ -109,6 +124,9 @@ aippocampus mcp list-tools</code></pre>
         <div class="footer-links">
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
           <a href="https://github.com/Sapientropic/AIppocampus/wiki">Wiki</a>
+          <a href="https://github.com/Sapientropic/AIppocampus/discussions">Discussions</a>
+          <a href="/updates/">Updates</a>
+          <a href="/story/">Story</a>
           <a href="/llms.txt">llms.txt</a>
         </div>
       </div>
