@@ -23,11 +23,11 @@
   </head>
   <body>
     <header class="site-hero compact">
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
           <a href="/">Home</a>
-          <a href="/getting-started/">Start</a>
+          <a href="/getting-started/" aria-current="page">Start</a>
           <a href="/architecture/">Architecture</a>
           <a href="/source-backed-continuity/">Continuity</a>
           <a href="/privacy/">Privacy</a>
@@ -36,11 +36,13 @@
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
         </div>
       </nav>
-      <div class="hero-inner">
-        <p class="kicker">First useful path</p>
-        <h1>Getting started</h1>
+      <section class="hero-inner hero-grid" aria-labelledby="page-title">
+        <div>
+          <p class="kicker">First useful path</p>
+          <h1 id="page-title">Getting started</h1>
+        </div>
         <p class="lede">Try AIppocampus locally before you configure anything ambitious: probe the CLI, check provider status, onboard only with consent, then search one old phrase from source.</p>
-      </div>
+      </section>
     </header>
 
     <main>

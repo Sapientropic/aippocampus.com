@@ -23,12 +23,12 @@
   </head>
   <body>
     <header class="site-hero compact">
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
           <a href="/">Home</a>
           <a href="/getting-started/">Start</a>
-          <a href="/architecture/">Architecture</a>
+          <a href="/architecture/" aria-current="page">Architecture</a>
           <a href="/source-backed-continuity/">Continuity</a>
           <a href="/privacy/">Privacy</a>
           <a href="/for-agents/">Agents</a>
@@ -36,11 +36,13 @@
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
         </div>
       </nav>
-      <div class="hero-inner">
-        <p class="kicker">System map</p>
-        <h1>Architecture</h1>
+      <section class="hero-inner hero-grid" aria-labelledby="page-title">
+        <div>
+          <p class="kicker">System map</p>
+          <h1 id="page-title">Architecture</h1>
+        </div>
         <p class="lede">AIppocampus is a source-backed continuity layer. The architecture is built around one rule: source is the ground, summaries are navigation.</p>
-      </div>
+      </section>
     </header>
 
     <main>

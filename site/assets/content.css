@@ -94,6 +94,31 @@ li {
 
 .route {
   text-decoration: none;
+  position: relative;
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.route::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.route:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 40px -34px var(--shadow);
+}
+
+.route:hover::before,
+.route:focus-visible::before {
+  opacity: 1;
 }
 
 .route span,
@@ -105,14 +130,14 @@ li {
   font-size: 0.9rem;
 }
 
-.eyebrow {
-  color: var(--gold);
-  font-family: var(--font-ui);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.timeline-item h3 {
+  margin-top: 6px;
+  font-size: 1.55rem;
+  line-height: 1.22;
 }
+
+/* (Removed .eyebrow; use .kicker from components.css — it auto-switches
+   to soft gold inside .site-hero and stays deep gold on light surfaces.) */
 
 .code-panel {
   border: 1px solid rgba(17, 24, 39, 0.24);
@@ -159,6 +184,14 @@ code {
   padding-left: 1.25rem;
   display: grid;
   gap: 10px;
+}
+
+.number-list li::marker,
+.plain-list li::marker {
+  font-family: var(--font-ui);
+  font-size: 0.85em;
+  font-weight: 800;
+  color: var(--gold);
 }
 
 .table-wrap {

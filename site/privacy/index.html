@@ -23,24 +23,26 @@
   </head>
   <body>
     <header class="site-hero compact">
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
           <a href="/">Home</a>
           <a href="/getting-started/">Start</a>
           <a href="/architecture/">Architecture</a>
           <a href="/source-backed-continuity/">Continuity</a>
-          <a href="/privacy/">Privacy</a>
+          <a href="/privacy/" aria-current="page">Privacy</a>
           <a href="/for-agents/">Agents</a>
           <a href="/evidence/">Evidence</a>
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
         </div>
       </nav>
-      <div class="hero-inner">
-        <p class="kicker">Local-first boundary</p>
-        <h1>Privacy</h1>
-        <p class="lede">AIppocampus is local first because memory is intimate. Public code and public docs are different from the private source trail that makes continuity possible.</p>
-      </div>
+      <section class="hero-inner hero-grid" aria-labelledby="page-title">
+        <div>
+          <p class="kicker">Privacy boundary</p>
+          <h1 id="page-title">Privacy</h1>
+        </div>
+        <p class="lede">Local by default, public only by choice. Read what stays on your machine, what can become public, and why sync must stay explicit.</p>
+      </section>
     </header>
 
     <main>

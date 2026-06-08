@@ -23,24 +23,26 @@
   </head>
   <body>
     <header class="site-hero compact">
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a class="mark" href="/">AIppocampus</a>
         <div class="nav-links">
           <a href="/">Home</a>
           <a href="/getting-started/">Start</a>
           <a href="/architecture/">Architecture</a>
-          <a href="/source-backed-continuity/">Continuity</a>
+          <a href="/source-backed-continuity/" aria-current="page">Continuity</a>
           <a href="/privacy/">Privacy</a>
           <a href="/for-agents/">Agents</a>
           <a href="/evidence/">Evidence</a>
           <a href="https://github.com/Sapientropic/AIppocampus">GitHub</a>
         </div>
       </nav>
-      <div class="hero-inner">
-        <p class="kicker">Trust grammar</p>
-        <h1>Source-backed continuity</h1>
-        <p class="lede">AIppocampus lets memory feel continuous without treating every summary, search score, or ambient hint as truth.</p>
-      </div>
+      <section class="hero-inner hero-grid" aria-labelledby="page-title">
+        <div>
+          <p class="kicker">Continuity model</p>
+          <h1 id="page-title">Source-backed continuity</h1>
+        </div>
+        <p class="lede">A clear grammar for evidence: what agents treat as direction, route, bounded evidence, and open source when continuity matters.</p>
+      </section>
     </header>
 
     <main>

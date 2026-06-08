@@ -123,6 +123,12 @@ svg {
   opacity: 1;
 }
 
+.nav-links a[aria-current="page"] {
+  opacity: 1;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 3px;
+}
+
 .hero-inner {
   width: min(1180px, calc(100% - 40px));
   margin: auto auto 0;
@@ -136,14 +142,21 @@ svg {
   align-items: end;
 }
 
+/* Kicker: small uppercase label.
+   Default = deep gold for light surfaces.
+   Inside .site-hero = soft gold for the dark photo background. */
 .kicker {
   margin: 0 0 16px;
-  color: var(--gold-soft);
+  color: var(--gold);
   font-family: var(--font-ui);
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.site-hero .kicker {
+  color: var(--gold-soft);
 }
 
 h1,
