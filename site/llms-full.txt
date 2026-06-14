@@ -26,14 +26,18 @@ Fastest useful path:
 
 ```sh
 uvx aippocampus --help
-uvx aippocampus onboard --provider codex --status --format json
-uvx aippocampus search "a distinctive old phrase"
+uvx aippocampus onboard --provider auto --status --format json
 ```
 
-Register local history only after explicit consent:
+Register selected local history only after explicit consent, then run one
+source-backed search:
 
 ```sh
 uvx aippocampus onboard --provider codex --all --format json
+uvx aippocampus onboard --provider claude-code --dry-run --format json
+uvx aippocampus onboard --provider claude-code --format json
+uvx aippocampus import conversation --format generic-jsonl --input <path> --json
+uvx aippocampus search "a distinctive old phrase"
 ```
 
 The first useful proof is not a vague personal profile. It is a source-backed
@@ -49,7 +53,8 @@ AIppocampus has six public-facing layers:
 3. Registry and indexes find threads, snippets, and source references.
 4. Ambient hooks notice when old context may matter.
 5. Semantic routes organize attention without becoming truth.
-6. CLI, MCP, sync, and package surfaces expose public contracts.
+6. CLI, MCP, explicit agent recall, sync, and package surfaces expose public
+   contracts.
 
 The rule is simple: source is the ground; summaries are navigation.
 
@@ -72,7 +77,7 @@ Retrieval path:
 provider transcript
   -> clean source
   -> registry and local indexes
-  -> search, MCP, hooks, sync
+  -> search, MCP, explicit agent recall, hooks, sync
   -> source reopen when claims matter
 ```
 
@@ -102,6 +107,8 @@ Public surfaces:
 
 - Human or script checks: `aippocampus` CLI.
 - Agent host read tools: MCP.
+- Opt-in foreground recall: `agent recall`, `agent deepen`, and
+  `agent explain`.
 - Provider-neutral import: generic JSONL import.
 - CI or local automation: CLI `--json` and documented return codes.
 - Trusted in-process command dispatch: `run_command(capture_output=True)`.
@@ -111,9 +118,18 @@ Public surfaces:
 Evidence and field reports should be source-backed, claim-bounded, and
 public-safe.
 
-Official evidence belongs in repository docs. Community reports are signals,
-not automatic product claims. Discussions are best for questions, ideas,
-design review, and developing interpretation.
+Read Magic Moments first for product-shaped examples, then the Can-Claim
+Ladder and Public Provenance Ledger for current support and boundaries.
+Official benchmark and readiness details remain in repository docs. Community
+reports are signals, not automatic product claims. Discussions are best for
+questions, ideas, design review, and developing interpretation.
+
+Primary repository routes:
+
+- Magic Moments: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/magic-moments.md
+- Can-Claim Ladder: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/can-claim-ladder.md
+- Public Provenance Ledger: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/public-provenance-ledger.md
+- Benchmark Evidence Map: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/benchmark-evidence-map.md
 
 Field report shape:
 
@@ -133,6 +149,8 @@ Field report shape:
 
 Recent public updates:
 
+- 2026-06-14: Public site links and agent-facing commands were realigned with
+  the main repository's provider-matrix, evidence, and moved-doc routes.
 - 2026-06-08: Public site tightened for first recall, unified style, copyable
   commands, updates/story pages, and machine-readable text files.
 - 2026-06-07: Website source moved into Sapientropic/aippocampus.com.

@@ -20,6 +20,10 @@ Full public context: https://www.aippocampus.com/llms-full.txt
 Humans: https://www.aippocampus.com/humans.txt
 Install guide: https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/install-guide.md
 Public API: https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md
+Coding-agent memory lane: https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/coding-agent-memory.md
+Magic moments: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/magic-moments.md
+Can-claim ladder: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/can-claim-ladder.md
+Public provenance ledger: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/public-provenance-ledger.md
 Claim boundary: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/readiness/stage-0-5-readiness.md
 Evidence map: https://github.com/Sapientropic/AIppocampus/blob/main/docs/evidence/benchmark-evidence-map.md
 
@@ -47,21 +51,26 @@ Use this command for a read-only local onboarding/status check before
 recommending deeper setup:
 
 ```sh
-uvx aippocampus onboard --provider codex --status --format json
+uvx aippocampus --help
+uvx aippocampus onboard --provider auto --status --format json
 ```
 
-Only after the user agrees to register local Codex history, run:
+Only after the user agrees to register selected local history, choose the
+matching write path:
 
 ```sh
 uvx aippocampus onboard --provider codex --all --format json
+uvx aippocampus onboard --provider claude-code --dry-run --format json
+uvx aippocampus onboard --provider claude-code --format json
+uvx aippocampus import conversation --format generic-jsonl --input <path> --json
 uvx aippocampus search "a distinctive old phrase"
 ```
 
-Use this package probe only when you need to verify that the CLI is installed
-without touching memory state:
+For explicit foreground agent continuity or host wiring checks, use:
 
 ```sh
-uvx aippocampus --help
+uvx aippocampus agent recall "a continuity-sensitive cue" --json
+uvx aippocampus mcp list-tools
 ```
 
 ## Important Boundaries

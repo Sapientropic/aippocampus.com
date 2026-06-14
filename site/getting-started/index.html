@@ -53,13 +53,13 @@
             <ol class="number-list">
               <li>Use Python 3.12 or newer.</li>
               <li>Probe the packaged CLI without writing memory artifacts.</li>
-              <li>Check local conversation providers in read-only mode.</li>
-              <li>Register local history only after explicit consent.</li>
+              <li>Check the local provider matrix in read-only mode.</li>
+              <li>Register selected local history only after explicit consent.</li>
               <li>Search for one distinctive old phrase and reopen source when claims matter.</li>
             </ol>
             <div class="button-row">
               <a class="button" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/install-guide.md">Install guide</a>
-              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus#first-checks">README first checks</a>
+              <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus#quick-start">README quick start</a>
             </div>
           </div>
         </div>
@@ -76,15 +76,18 @@
                 <button class="copy-button" type="button" data-copy-target="#getting-started-probe">Copy</button>
               </div>
               <pre><code id="getting-started-probe">uvx aippocampus --help
-uvx aippocampus onboard --provider codex --status --format json</code></pre>
+uvx aippocampus onboard --provider auto --status --format json</code></pre>
             </div>
-            <p class="section-copy">After you decide this machine may create local memory artifacts:</p>
+            <p class="section-copy">After you decide this machine may create local memory artifacts, choose the matching write path:</p>
             <div class="code-panel">
               <div class="code-panel-header">
                 <span>Consented onboarding</span>
                 <button class="copy-button" type="button" data-copy-target="#getting-started-onboard">Copy</button>
               </div>
               <pre><code id="getting-started-onboard">uvx aippocampus onboard --provider codex --all --format json
+uvx aippocampus onboard --provider claude-code --dry-run --format json
+uvx aippocampus onboard --provider claude-code --format json
+uvx aippocampus import conversation --format generic-jsonl --input &lt;path&gt; --json
 uvx aippocampus search "a distinctive old phrase"</code></pre>
             </div>
           </div>
@@ -124,7 +127,7 @@ uvx aippocampus search "a distinctive old phrase"</code></pre>
               <a class="button" href="/architecture/">Architecture</a>
               <a class="button secondary" href="/for-agents/">For agents</a>
             </div>
-            <p class="source-note">Adapted from the public wiki pages Getting Started and First Recall and Onboarding.</p>
+            <p class="source-note">Adapted from the repository README, install guide, and coding-agent memory lane.</p>
           </div>
         </div>
       </section>

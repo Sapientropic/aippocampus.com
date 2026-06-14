@@ -67,7 +67,7 @@
                 "name": "What is the fastest way to try it?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Run uvx aippocampus --help, check provider status, then onboard local history only after explicit consent."
+                  "text": "Run uvx aippocampus --help, check provider status in read-only auto mode, then onboard selected local history only after explicit consent."
                 }
               }
             ]
@@ -130,7 +130,7 @@
               <article class="step">
                 <span>2. Consent</span>
                 <h3>Inspect providers.</h3>
-                <p>Use read-only status first; onboard local history only when allowed.</p>
+                <p>Use read-only status first; choose a provider-specific onboarding path only when allowed.</p>
               </article>
               <article class="step">
                 <span>3. Search</span>
@@ -144,7 +144,8 @@
                 <button class="copy-button" type="button" data-copy-target="#home-recall-code">Copy</button>
               </div>
               <pre><code id="home-recall-code">uvx aippocampus --help
-uvx aippocampus onboard --provider codex --status --format json
+uvx aippocampus onboard --provider auto --status --format json
+uvx aippocampus onboard --provider codex --all --format json
 uvx aippocampus search "a distinctive old phrase"</code></pre>
             </div>
           </div>

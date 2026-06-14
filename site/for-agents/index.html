@@ -70,6 +70,7 @@
               <tbody>
                 <tr><td>Human or script checks</td><td><code>aippocampus</code> CLI</td></tr>
                 <tr><td>Agent host read tools</td><td>MCP</td></tr>
+                <tr><td>Opt-in foreground recall</td><td><code>agent recall</code>, <code>agent deepen</code>, and <code>agent explain</code></td></tr>
                 <tr><td>Provider-neutral import</td><td>Generic JSONL import</td></tr>
                 <tr><td>CI or local automation</td><td>CLI <code>--json</code> and documented return codes</td></tr>
                 <tr><td>Trusted in-process command dispatch</td><td><code>run_command(capture_output=True)</code></td></tr>
@@ -89,9 +90,9 @@
                 <button class="copy-button" type="button" data-copy-target="#agent-status">Copy</button>
               </div>
               <pre><code id="agent-status">uvx aippocampus --help
-uvx aippocampus onboard --provider codex --status --format json</code></pre>
+uvx aippocampus onboard --provider auto --status --format json</code></pre>
             </div>
-            <p class="section-copy">After explicit consent to register local history:</p>
+            <p class="section-copy">For the current complete Codex path after explicit consent:</p>
             <div class="code-panel">
               <div class="code-panel-header">
                 <span>Consented agent path</span>
@@ -99,7 +100,8 @@ uvx aippocampus onboard --provider codex --status --format json</code></pre>
               </div>
               <pre><code id="agent-onboard">uvx aippocampus onboard --provider codex --all --format json
 uvx aippocampus search "a distinctive old phrase"
-aippocampus mcp list-tools</code></pre>
+uvx aippocampus agent recall "a continuity-sensitive cue" --json
+uvx aippocampus mcp list-tools</code></pre>
             </div>
           </div>
         </div>
@@ -114,7 +116,7 @@ aippocampus mcp list-tools</code></pre>
               <a class="button" href="/llms.txt">llms.txt</a>
               <a class="button secondary" href="https://github.com/Sapientropic/AIppocampus/blob/main/docs/guides/public-api.md">Public API</a>
             </div>
-            <p class="source-note">Adapted from the public wiki page MCP and Public API plus the AIppocampus runtime entrypoint.</p>
+            <p class="source-note">Adapted from the public API, coding-agent memory lane, and AIppocampus runtime entrypoint.</p>
           </div>
         </div>
       </section>
